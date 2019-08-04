@@ -11,6 +11,8 @@ import {Platform, StyleSheet, Text, View, Alert, Button,
         } from 'react-native';
 
 type Props = {};
+var test = 0;
+
 export default class App extends Component<Props> {
 
   // Read from the given Link
@@ -18,6 +20,7 @@ export default class App extends Component<Props> {
 
   constructor() {
 
+    // Step 1
     // Construction will run at first
 
     super();
@@ -27,15 +30,22 @@ export default class App extends Component<Props> {
       }
   }
 
+
+  // componentWillMount() {
+  //
+  //   // Alert.alert('WillMount');
+  //
+  // // Step 2
+  // // Note: Before running ComponentWillMount render() function will be called
+  //
+  // }
+
   componentDidMount() {
 
+    // Step 4
     // After Constructor ComponentDidmountwillRun
 
-  }
-
-  componentWillMount() {
-
-  // Note: Before running ComponentWillMount render() function will be called
+    Alert.alert('DidMount');
 
   }
 
@@ -73,16 +83,22 @@ export default class App extends Component<Props> {
     }
 
   render() {
-    return (
+
+  // Step 3
+  return (
 
   <View style={styles.container}>
 
   <View style={styles.viewStyleOne}>
-    <Text style={styles.textStyle}> ABC </Text>
+    <Text style={styles.textStyle}> Saqib </Text>
   </View>
 
   <View style={styles.viewStyleTwo}>
-    <Text style={styles.textStyle}> XYZ </Text>
+    <Text style={styles.textStyle}> Umer </Text>
+  </View>
+
+  <View style={styles.viewStyleTwo}>
+    <Text style={styles.textStyle}> Ammar </Text>
   </View>
 
   </View>
@@ -124,6 +140,7 @@ const styles = StyleSheet.create({
     // flexGrow: 1,
     // alignSelf: 'flex-start',
   },
+
   viewStyleThree: {
     width:40,
     height:40,
